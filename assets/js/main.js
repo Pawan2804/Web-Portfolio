@@ -231,7 +231,7 @@ document.getElementById("check").onclick = function() {
         To : 'pawan.vijayaraghavan98@gmail.com',
         From : 'pawan.vijayaraghavan98@gmail.com',
         Subject : document.getElementById("project-contact").value,
-        Body : "Email From: " + document.getElementById("email").value + '\n' + "The message is: "+document.getElementById("message-contact").value
+        Body : "Email From: " + document.getElementById("name").value+ "    "+ "Email id: " + document.getElementById("email").value + "    " + "The message is: "+document.getElementById("message-contact").value
     }).then(
       message => alert("Email sent Successfully")
     );
