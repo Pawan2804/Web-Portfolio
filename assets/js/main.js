@@ -222,3 +222,17 @@ document.getElementById("check").onclick = function() {
       alert('Fill all the fields');
     }
   };
+
+  function sendEmail(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "pawan.vijayaraghavan98@gmail.com",
+        Password : "98BDA4A5E89103EC34E5D8E8A442B61EEC82",
+        To : 'pawan.vijayaraghavan98@gmail.com',
+        From : 'pawan.vijayaraghavan98@gmail.com',
+        Subject : document.getElementById("project-contact").value,
+        Body : "Email From: " + document.getElementById("email").value + '\n' + "The message is: "+document.getElementById("message-contact").value
+    }).then(
+      message => alert("Email sent Successfully")
+    );
+  }
